@@ -11,6 +11,7 @@ class App extends Component{
     YTSearch({key:API_KEY, term:'Sachin Tendulkar'},
 
         (videos)=>{
+        console.log(videos);
         this.setState({videos});     // ES6 replacement of {vedios:vedios}
         });
     }
@@ -22,3 +23,5 @@ class App extends Component{
         );
     }
 }
+
+ReactDom.render(<App />, document.querySelector('.container'));
